@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KrU686ynoRKp201uspOONkLkh+gbpynEuy7FraHkB3rgFc+PItgoU1D0tKcSbkcO8lkdQYcO3zcgjqngyddkEg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jose\\Documents\\DEV24\\repo\\SistemaParroquial\\SistemaParroquial.Repositories\\SistemaParroquial.Repositories.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jose\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512"
+  ],
+  "logs": []
+}

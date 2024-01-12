@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SistemaParroquial.Server.props" />
+</Project>

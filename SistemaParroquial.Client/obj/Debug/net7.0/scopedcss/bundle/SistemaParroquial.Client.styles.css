@@ -1,0 +1,221 @@
+/* /Pages/Misas/MisaList.razor.rz.scp.css */
+h3[b-3ya0vz2s4z]{
+    color:red;
+}
+
+.agruparTablaSwitch[b-3ya0vz2s4z] {
+    display: inline-block;
+}
+
+.switch[b-3ya0vz2s4z] {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
+
+    /* Hide default HTML checkbox */
+    .switch input[b-3ya0vz2s4z] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+/* The slider */
+.slider[b-3ya0vz2s4z] {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider[b-3ya0vz2s4z]:before {
+        position: absolute;
+        content: "";
+        height: 11px;
+        width: 11px;
+        left: 1px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider[b-3ya0vz2s4z] {
+    background-color: #2196F3;
+}
+
+input:focus + .slider[b-3ya0vz2s4z] {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider[b-3ya0vz2s4z]:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round[b-3ya0vz2s4z] {
+    border-radius: 34px;
+}
+
+    .slider.round[b-3ya0vz2s4z]:before {
+        border-radius: 50%;
+    }
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-l8yc6woxgp] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-l8yc6woxgp] {
+    flex: 1;
+}
+
+.sidebar[b-l8yc6woxgp] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-l8yc6woxgp] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-l8yc6woxgp]  a, .top-row[b-l8yc6woxgp]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-l8yc6woxgp]  a:hover, .top-row[b-l8yc6woxgp]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-l8yc6woxgp]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-l8yc6woxgp] {
+        display: none;
+    }
+
+    .top-row.auth[b-l8yc6woxgp] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-l8yc6woxgp]  a, .top-row[b-l8yc6woxgp]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-l8yc6woxgp] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-l8yc6woxgp] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-l8yc6woxgp] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-l8yc6woxgp]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-l8yc6woxgp], article[b-l8yc6woxgp] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-r8tj5xiti6] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-r8tj5xiti6] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-r8tj5xiti6] {
+    font-size: 1.1rem;
+}
+
+.oi[b-r8tj5xiti6] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-r8tj5xiti6] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-r8tj5xiti6] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-r8tj5xiti6] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-r8tj5xiti6]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-r8tj5xiti6]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-r8tj5xiti6]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-r8tj5xiti6] {
+        display: none;
+    }
+
+    .collapse[b-r8tj5xiti6] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+    
+    .nav-scrollable[b-r8tj5xiti6] {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}

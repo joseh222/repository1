@@ -1,0 +1,131 @@
+﻿@page "/misaregistro"
+@page "/misaregistro/{id:int}"
+
+@inject IMisaTipoService _iMisaTipoService
+@inject IMisaMotivoService _iMisaMotivoService
+@inject IMisaRootService _iMisaRootService
+@inject INombresRootService _iNombresRootService
+
+@*@inject IDialogService DialogService*@
+@inject NavigationManager _navigation
+@*@inject ISnackbar Snackbar*@
+
+
+<PageTitle>Misas</PageTitle>
+<h3>@((id == 0) ? "Registrar" : "Actualizar") Misa</h3>
+
+<EditForm Model="@objMisa">
+    <div>
+        <div class="d-flex align-content-center">
+            <label for="MotivoMisa">Misa</label>
+            <div class="d-flex flex-grow-1 ma-2 ">
+                <InputSelect class="form-select" @bind-Value="objMisa.MotivoMisa.IdMotivoMisa">
+                    @if (_listMotivoMisa != null)
+                    {
+                        @foreach (var item in _listMotivoMisa)
+                        {
+                            <option value="@item.IdMotivoMisa">@item.Motivo</option>
+                        }
+                    }
+                </InputSelect>
+            </div>
+        </div>
+        <div class="d-flex align-content-center">
+            <label for="TipoMisa">Tipo de Misa</label>
+            <div class="d-flex flex-grow-1 ma-2 ">
+                <InputSelect class="form-control" @bind-Value="objMisa.TipoMisa.IdTipoMisa">
+                    @if (_listTipoMisa != null)
+                    {
+                        @foreach (var item in _listTipoMisa)
+                        {
+                            <option value="@item.IdTipoMisa">@item.Tipo</option>
+                        }
+                    }
+                </InputSelect>
+            </div>
+        </div>
+        <div>
+            <label for="TipoMisa">Motivo de Misa</label>
+            <InputText class="form-control" @bind-Value="objMisa.Motivo"></InputText>
+        </div>
+        <div>
+            <label for="TipoMisa">Fecha de Misa</label>
+            <InputDate class="form-control" @bind-Value="objMisa.DateMass"></InputDate>
+        </div>
+        <div>
+            <label for="TipoMisa">Hora de Misa</label>
+            <input type="time" @bind-value=objMisa.HoraMass/>
+        </div>
+        <div>
+            <label for="TipoMisa">Donación</label>
+            <InputNumber class="form-control" @bind-Value="objMisa.Pay"></InputNumber>
+        </div>
+        <div>
+            <label for="TipoMisa">Observaciones</label>
+            <InputTextArea class="form-control" @bind-Value="objMisa.Observaciones"></InputTextArea>
+        </div>
+    </div>
+</EditForm>
+
+
+@code {
+    //PARAMETROS
+    [Parameter]
+    public int id { get; set; } = 0;
+
+    //LISTAS
+    public IEnumerable<MisaTipo>? _listTipoMisa;
+    public IEnumerable<MisaMotivo>? _listMotivoMisa;
+    public List<NombresRoot> _listNombres = new List<NombresRoot>();
+    public HashSet<NombresRoot> _selectedNombres = new HashSet<NombresRoot>();
+
+    //OBJETOS
+    public MisaRoot? objMisa = new MisaRoot();
+    public NombresRoot? _selectedNombre = new NombresRoot();
+    private NombresRoot? _elementBeforeEdit;
+    private MisaTipo? _selectTipoMisa { get; set; }
+
+    //TIPOS DE DATOS
+    private bool _procesando = false;
+    private bool _boolMisaPersonal { get; set; } = false;
+    public DateTime _fechaMinima = DateTime.Now;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            objMisa = new MisaRoot();
+            objMisa.MotivoMisa = new MisaMotivo();
+            objMisa.TipoMisa = new MisaTipo ();
+            _listTipoMisa = await _iMisaTipoService.GetTipoMisa();
+            _listMotivoMisa = await _iMisaMotivoService.GetMotivoMisa();
+            if (!(_listMotivoMisa == null || _listMotivoMisa.Count() == 0))
+            {
+                objMisa.MotivoMisa = _listMotivoMisa.FirstOrDefault();
+            }
+            objMisa.ListNombres = new List<NombresRoot>();
+
+            //Para editar
+            if (id != 0)
+            {
+                objMisa = await _iMisaRootService.GetById(id);
+                objMisa.ListNombres = await _iNombresRootService.GetById(id);
+                objMisa!.TipoMisa = _listTipoMisa!.FirstOrDefault(x => x.IdTipoMisa == objMisa.TipoMisa!.IdTipoMisa);
+                objMisa!.MotivoMisa = _listMotivoMisa!.FirstOrDefault(x => x.IdMotivoMisa == objMisa.MotivoMisa!.IdMotivoMisa);
+            }
+            //else if (id != 0)
+            //{
+            //    objMisa = await _iMisaService.GetById(id);
+            //    objMisa.ListNombres = await _iNombresService.GetById(id);
+            //    objMisa!.TipoMisa = _listTipoMisa!.FirstOrDefault(x => x.IdTipoMisa == objMisa.TipoMisa!.IdTipoMisa);
+            //    objMisa!.MotivoMisa = _listMotivoMisa!.FirstOrDefault(x => x.IdMotivoMisa == objMisa.MotivoMisa!.IdMotivoMisa);
+            //}
+            StateHasChanged();
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+}

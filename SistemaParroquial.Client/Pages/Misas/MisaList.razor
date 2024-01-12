@@ -1,0 +1,92 @@
+﻿@page "/misalist"
+
+@inject IMisaTipoService _iMisaTipoService
+@inject IMisaRootService _iMisaRootService
+@inject INombresRootService _iNombresRootServices
+
+@*@inject IDialogService DialogService*@
+@inject NavigationManager _navigation
+
+<PageTitle>Misas</PageTitle>
+<h3>Listado de Misas</h3>
+
+<h1>Misas registradas</h1>
+<p>Listado de las misas registradas hasta la actualidad.</p>
+
+<div class="botonesHeader">
+    <div>
+        <button>Agregar Misa</button>
+    </div>
+    <div>
+        <button>Descargar Reporte</button>
+    </div>
+</div>
+
+<div>
+    <div>
+        <input type="checkbox"/>
+    </div>
+</div>
+<div class="agruparTabla">
+    <div>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div>
+        <p>Agrupar por fecha de misa</p>
+    </div>
+</div>
+
+@if (_listMisas == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>Acciones editar e imprimir</th>
+            <th>Tipo de Misa</th>
+            <th>Motivo de Misa</th>
+            <th>Fecha y Hora de Misa</th>
+            <th>Donacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in _listMisas)
+        {
+            <tr>
+                <td>
+                    <a class="btn primary btn-sm" href="misaregistro/@item.IdMisa">
+                        <i class="oi oi-pencil"></i>
+                    </a>
+                    <button type="button" class="btn btn-secondary btn-sm ms-2">
+                        <i class="oi oi-print"></i>
+                    </button>
+                </td>
+                <td>@item.TipoMisa.Tipo</td>
+                <td>@item.MotivoMisa.Motivo</td>
+                <td>@item.FhMisa</td>
+                <td>@item.Pay</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm ms-2">
+                        <i class="oi oi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+@code {
+    private List<MisaRoot> _listMisas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _listMisas = await _iMisaRootService.GetAll();
+    }
+}

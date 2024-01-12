@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6qBqMV7frI/l7QLj2pAicptmgVVLhoVbAHEtS4Na75Q=",
+  "Source": "SistemaParroquial.Server",
+  "BasePath": "_content/SistemaParroquial.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

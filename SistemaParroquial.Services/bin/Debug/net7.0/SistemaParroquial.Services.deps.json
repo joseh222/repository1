@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "SistemaParroquial.Services/1.0.0": {
+        "dependencies": {
+          "SistemaParroquial.Shared": "1.0.0"
+        },
+        "runtime": {
+          "SistemaParroquial.Services.dll": {}
+        }
+      },
+      "SistemaParroquial.Shared/1.0.0": {
+        "runtime": {
+          "SistemaParroquial.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaParroquial.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SistemaParroquial.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

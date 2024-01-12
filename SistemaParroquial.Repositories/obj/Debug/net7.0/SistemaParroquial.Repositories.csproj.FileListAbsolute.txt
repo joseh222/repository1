@@ -1,0 +1,15 @@
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.csproj.AssemblyReference.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.AssemblyInfoInputs.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.AssemblyInfo.cs
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\bin\Debug\net7.0\SistemaParroquial.Repositories.deps.json
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\bin\Debug\net7.0\SistemaParroquial.Repositories.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\bin\Debug\net7.0\SistemaParroquial.Repositories.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\bin\Debug\net7.0\SistemaParroquial.Shared.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\bin\Debug\net7.0\SistemaParroquial.Shared.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.csproj.CopyComplete
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\refint\SistemaParroquial.Repositories.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\SistemaParroquial.Repositories.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Repositories\obj\Debug\net7.0\ref\SistemaParroquial.Repositories.dll

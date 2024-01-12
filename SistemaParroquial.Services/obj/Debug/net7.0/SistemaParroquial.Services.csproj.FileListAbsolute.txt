@@ -1,0 +1,15 @@
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\bin\Debug\net7.0\SistemaParroquial.Services.deps.json
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\bin\Debug\net7.0\SistemaParroquial.Services.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\bin\Debug\net7.0\SistemaParroquial.Services.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.csproj.AssemblyReference.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.AssemblyInfoInputs.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.AssemblyInfo.cs
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\refint\SistemaParroquial.Services.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\ref\SistemaParroquial.Services.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\bin\Debug\net7.0\SistemaParroquial.Shared.dll
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\bin\Debug\net7.0\SistemaParroquial.Shared.pdb
+C:\Users\Jose\Documents\DEV24\repo\SistemaParroquial\SistemaParroquial.Services\obj\Debug\net7.0\SistemaParroquial.Services.csproj.CopyComplete

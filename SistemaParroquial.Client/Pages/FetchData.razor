@@ -1,0 +1,60 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+@inject IMisaRootService _iMisaRootService
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (_listMisas == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in _listMisas)
+            {
+                <tr>
+                    <td>@forecast.IdMisa</td>
+                    <td>@forecast.TipoMisa.Tipo</td>
+                    <td>@forecast.MotivoMisa.Motivo</td>
+                    <td>@forecast.Pay</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecast[]? forecasts;
+    private List<MisaRoot> _listMisas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        _listMisas = await _iMisaRootService.GetAll();
+    }
+
+    public class WeatherForecast
+    {
+        public DateOnly Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string? Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}
